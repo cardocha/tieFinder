@@ -1,7 +1,8 @@
 # TieFinder
 Spring Web Flux Demonstration using Apache Cassandra to fetch Star Wars planet info.   
 
-[Video Demonstration](https://gph.is/g/Z8ej980)
+![](red_saber.gif)
+
 
 ## Getting Started
 * This is a Spring boot and Maven Project.
