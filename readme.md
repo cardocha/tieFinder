@@ -1,5 +1,5 @@
 # TieFinder
-Spring Web Flux Demonstration using Apache Cassandra to fetch Star Wars planet info.   
+Spring Web Flux demonstration using Apache Cassandra to fetch Star Wars planets info.   
 
 ![](red_saber.gif)
 
@@ -13,7 +13,7 @@ Spring Web Flux Demonstration using Apache Cassandra to fetch Star Wars planet i
 
 ### Prerequisites
 
-JAVA 8, Apacha Cassandra 3, Spring Webflux
+JAVA 8, Apache Cassandra 3, Spring Webflux
 
 ## Authors
 
