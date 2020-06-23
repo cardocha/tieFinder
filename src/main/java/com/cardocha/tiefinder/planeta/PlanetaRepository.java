@@ -4,11 +4,10 @@ import org.springframework.data.cassandra.repository.ReactiveCassandraRepository
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 
-import java.util.List;
 import java.util.UUID;
 
 @Repository
-public interface PlanetaRepository extends ReactiveCassandraRepository<Planeta, UUID> {
+public interface PlanetaRepository extends ReactiveCassandraRepository<Planeta, UUID> , PlanetaRepositoryCustom {
 
-    Flux<Planeta> findAllByNomeLike(String nome);
+    Flux<Planeta> findAllByName(String nome);
 }

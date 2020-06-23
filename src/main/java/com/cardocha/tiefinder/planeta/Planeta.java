@@ -3,9 +3,7 @@ package com.cardocha.tiefinder.planeta;
 import com.datastax.driver.core.utils.UUIDs;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.cassandra.core.mapping.Column;
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.cassandra.core.mapping.*;
 
 import java.util.UUID;
 
@@ -18,18 +16,36 @@ public class Planeta {
     private UUID id;
 
     @Column
-    private String nome;
+    @Indexed
+    private String name;
 
     @Column
-    private String clima;
+    private String climate;
 
     @Column
-    private String terreno;
+    private String terrain;
 
-    public Planeta(String nome, String clima, String terreno) {
-        this.id = UUIDs.timeBased();
-        this.nome = nome;
-        this.clima = clima;
-        this.terreno = terreno;
+    @Column
+    private Integer filmCount;
+
+    public Planeta() {
     }
+
+    public Planeta(String name, String climate, String terrain) {
+        this.name = name;
+        this.climate = climate;
+        this.terrain = terrain;
+        this.filmCount = 0;
+    }
+
+    public static Planeta of(Integer filmCount, Planeta planeta) {
+        Planeta novo = new Planeta();
+        novo.id = planeta.getId();
+        novo.name = planeta.getName();
+        novo.climate = planeta.getClimate();
+        novo.terrain = planeta.getTerrain();
+        novo.filmCount = filmCount;
+        return novo;
+    }
+
 }
