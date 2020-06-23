@@ -12,20 +12,20 @@ Spring Web Flux demonstration using Apache Cassandra to fetch Star Wars planets 
 * Run.
 
 ### Endpoints:
-* LIST DE PLANETAS: GET http://localhost:8080/planetas
+* LIST DE PLANETAS: GET - /planetas
 
-* GET BY ID: GET http://localhost:8080/planetas/abf07070-b4f5-11ea-a78a-69e9787c2e39
+* GET BY ID: GET  - /planetas/{id}
 
-* NOVO PLANETA: POST localhost:8080/planetas/
+* NOVO PLANETA: POST planetas/
 {
     "name": "Bespin",
     "climate": "Nice climate",
     "terrain": "Good terrain"
 }
 
-* REMOVER PLANETA: DELETE http://localhost:8080/planetas/3538fce0-b3d3-11ea-94ac-37b84dad8a6a
+* REMOVER PLANETA: DELETE /planetas/{id}
 
-* BUSCAR PLANETA POR NOME: GET localhost:8080/planetas?name=tatooi
+* BUSCAR PLANETA POR NOME: /planetas?name=tatooi
 
 ### Classes
 
