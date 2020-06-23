@@ -4,13 +4,8 @@ import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.core.querybuilder.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.cassandra.core.CassandraTemplate;
-import org.springframework.data.cassandra.core.UpdateOptions;
-import org.springframework.data.cassandra.core.query.Query;
-import org.springframework.data.cassandra.core.query.Update;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
-
-import static org.springframework.data.cassandra.core.query.Criteria.where;
 
 @Repository
 public class PlanetaRepositoryImpl implements PlanetaRepositoryCustom {

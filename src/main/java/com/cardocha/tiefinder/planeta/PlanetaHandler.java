@@ -3,7 +3,7 @@ package com.cardocha.tiefinder.planeta;
 import com.datastax.driver.core.utils.UUIDs;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -16,7 +16,7 @@ import static com.cardocha.tiefinder.planeta.PlanetaWebClient.parse;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 @Slf4j
-@Service
+@Component
 @Transactional
 public class PlanetaHandler {
 

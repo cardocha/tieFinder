@@ -1,14 +1,18 @@
 package com.cardocha.tiefinder.planeta;
 
-import com.datastax.driver.core.utils.UUIDs;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.data.cassandra.core.mapping.*;
+import lombok.*;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.Indexed;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.util.UUID;
 
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table
 public class Planeta {
 
@@ -27,16 +31,6 @@ public class Planeta {
 
     @Column
     private Integer filmCount;
-
-    public Planeta() {
-    }
-
-    public Planeta(String name, String climate, String terrain) {
-        this.name = name;
-        this.climate = climate;
-        this.terrain = terrain;
-        this.filmCount = 0;
-    }
 
     public static Planeta of(Integer filmCount, Planeta planeta) {
         Planeta novo = new Planeta();

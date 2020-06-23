@@ -51,6 +51,8 @@ public class CassandraConfig extends AbstractReactiveCassandraConfiguration {
     }
 
     @Override
-    protected boolean getMetricsEnabled() { return false; }
+    protected boolean getMetricsEnabled() {
+        return false;
+    }
 
 }
