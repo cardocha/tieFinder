@@ -27,9 +27,6 @@ Spring Web Flux demonstration using Apache Cassandra to fetch Star Wars planets 
 
 * BUSCAR PLANETA POR NOME: [GET] /planetas?name=tatooi
 
-### Classes
-
-
 ### Prerequisites
 
 JAVA 8, Apache Cassandra 3, Spring Webflux
